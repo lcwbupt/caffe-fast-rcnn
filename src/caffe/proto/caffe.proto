@@ -397,7 +397,10 @@ message LayerParameter {
   optional ReLUParameter relu_param = 123;
   optional ReshapeParameter reshape_param = 133;
   optional ROIPoolingParameter roi_pooling_param = 8266711;
-  optional ScaleParameter scale_param = 142;
+//<<<<<<< HEAD
+//  optional ScaleParameter scale_param = 142;
+//=======
+//>>>>>>> 4115385deb3b907fcd428ac0ab53b694d741a3c4
   optional SigmoidParameter sigmoid_param = 124;
   optional SmoothL1LossParameter smooth_l1_loss_param = 8266712;
   optional SoftmaxParameter softmax_param = 125;
@@ -1075,7 +1078,8 @@ message ROIPoolingParameter {
   optional float spatial_scale = 3 [default = 1];
 }
 
-message ScaleParameter {
+//<<<<<<< HEAD
+//message ScaleParameter {
   // The first axis of bottom[0] (the first input Blob) along which to apply
   // bottom[1] (the second input Blob).  May be negative to index from the end
   // (e.g., -1 for the last axis).
@@ -1089,7 +1093,7 @@ message ScaleParameter {
   //    (axis == 3 == -1)                                60
   // Furthermore, bottom[1] may have the empty shape (regardless of the value of
   // "axis") -- a scalar multiplier.
-  optional int32 axis = 1 [default = 1];
+//  optional int32 axis = 1 [default = 1];
 
   // (num_axes is ignored unless just one bottom is given and the scale is
   // a learned parameter of the layer.  Otherwise, num_axes is determined by the
@@ -1097,21 +1101,23 @@ message ScaleParameter {
   // The number of axes of the input (bottom[0]) covered by the scale
   // parameter, or -1 to cover all axes of bottom[0] starting from `axis`.
   // Set num_axes := 0, to multiply with a zero-axis Blob: a scalar.
-  optional int32 num_axes = 2 [default = 1];
+//  optional int32 num_axes = 2 [default = 1];
 
   // (filler is ignored unless just one bottom is given and the scale is
   // a learned parameter of the layer.)
   // The initialization for the learned scale parameter.
   // Default is the unit (1) initialization, resulting in the ScaleLayer
   // initially performing the identity operation.
-  optional FillerParameter filler = 3;
+//  optional FillerParameter filler = 3;
 
   // Whether to also learn a bias (equivalent to a ScaleLayer+BiasLayer, but
   // may be more efficient).  Initialized with bias_filler (defaults to 0).
-  optional bool bias_term = 4 [default = false];
-  optional FillerParameter bias_filler = 5;
-}
+//  optional bool bias_term = 4 [default = false];
+//  optional FillerParameter bias_filler = 5;
+//}
 
+//=======
+//>>>>>>> 4115385deb3b907fcd428ac0ab53b694d741a3c4
 message SigmoidParameter {
   enum Engine {
     DEFAULT = 0;
