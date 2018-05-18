@@ -95,10 +95,10 @@ You can specify the parameters listed in the `eval.py` file by flagging them or 
 
 ## Example
 SSD:
-![](doc/003534.jpg)
+![](docs/images/caffeine-icon.png)
 
 SSD + repulsion loss：
-![](doc/003534_repul.jpg)
+
 
 ## Performance
 
